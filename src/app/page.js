@@ -6,7 +6,7 @@ function page() {
 
 
   const [noteData, setNoteData] = useState('')
-  const [noteStore, setStore] = useState([])
+  const [noteStore, setStore] = useState(null)
 
 
   const getInput = (e) => {
@@ -43,7 +43,7 @@ function page() {
       </div>
       <div>
         {
-          noteStore.length != 0 ? noteStore.map((ele, index) => <div>{ele.note}</div>) : <div>loading</div>
+          noteStore != null ? noteStore.map((ele, index) => <div>{ele.note}</div>) : <div>loading</div>
         }
       </div>
     </div>

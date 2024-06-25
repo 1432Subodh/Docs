@@ -17,6 +17,7 @@ function page() {
       }
       if (window.localStorage.length == 0) {
         window.localStorage.setItem('note', JSON.stringify([obj]))
+        setStore(JSON.parse(window.localStorage.getItem('note')))
         // let LS = window.localStorage.getItem('note')
         // console.log(JSON.parse(LS))
       } else {
